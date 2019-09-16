@@ -1,5 +1,5 @@
 # my-struggle-leetcode
-算法打卡日记
+
 | ID | topic | Solution | ideas | Java | Python | blog |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | --- | [yes] | --- | [yes] | [无] | [无] |
