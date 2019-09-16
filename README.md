@@ -2,7 +2,7 @@
 我的奋斗-记录点滴生活
 # 算法打卡日记
 
-| ID | topic | Solution | ideas | Java | Python | blog |
+| ID | title | Solution | ideas | Java | Python | blog |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | 两数之和 | √ | --- | √ | × | × |
 | 2 | 两数相加 | √ | --- | √ | × | × |
