@@ -1,5 +1,7 @@
 package l2;
 
+import common.ListNode;
+
 import java.util.ArrayList;
 
 /**
@@ -9,39 +11,7 @@ import java.util.ArrayList;
  * @Date 2019/8/8 6:46
  * @Version V1.0
  **/
- public class ListNode {
-    int val;
-    public ListNode next;
-    ListNode(int x) {
-        this.val = x;
-    }
-    public ListNode(int[] arr){
-
-        if(arr == null || arr.length == 0)
-            throw new IllegalArgumentException("arr can not be empty");
-
-        this.val = arr[0];
-        ListNode cur = this;
-        for(int i = 1 ; i < arr.length ; i ++){
-            cur.next = new ListNode(arr[i]);
-            cur = cur.next;
-        }
-    }
-    @Override
-    public String toString(){
-
-        StringBuilder s = new StringBuilder();
-        ListNode cur = this;
-        while(cur != null){
-            s.append(cur.val + "->");
-            cur = cur.next;
-        }
-        s.append("NULL");
-        return s.toString();
-    }
- }
-
-class Solution {
+public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ArrayList<Integer> list = new ArrayList<>();
         add(l1, l2, list);

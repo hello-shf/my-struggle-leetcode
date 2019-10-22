@@ -1,5 +1,7 @@
 package r206;
 
+import common.ListNode;
+
 /**
  * 描述：leetcode - 206 链表反转
  *
@@ -7,40 +9,7 @@ package r206;
  * @Date 2019/7/24 14:09
  * @Version V1.0
  **/
-
-public class ListNode {
-    int val;
-    public ListNode next;
-    ListNode(int x) {
-        this.val = x;
-    }
-    public ListNode(int[] arr){
-
-        if(arr == null || arr.length == 0)
-            throw new IllegalArgumentException("arr can not be empty");
-
-        this.val = arr[0];
-        ListNode cur = this;
-        for(int i = 1 ; i < arr.length ; i ++){
-            cur.next = new ListNode(arr[i]);
-            cur = cur.next;
-        }
-    }
-    @Override
-    public String toString(){
-
-        StringBuilder s = new StringBuilder();
-        ListNode cur = this;
-        while(cur != null){
-            s.append(cur.val + "->");
-            cur = cur.next;
-        }
-        s.append("NULL");
-        return s.toString();
-    }
-}
-
-class Solution {
+public class Solution {
     /**
      * 链表反转 - 递归
      * @param head
