@@ -41,6 +41,8 @@ public class NumArray {
     public static void main(String[] args) {
         int[] arr = {-2, 0, 3, -5, 2, -1};
         NumArray numArray = new NumArray(arr);
+        NumArray numArray1 = new NumArray(arr);
+        numArray.equals(numArray1);
         int i = numArray.sumRange(0, 2);
         System.out.println(i);
     }
