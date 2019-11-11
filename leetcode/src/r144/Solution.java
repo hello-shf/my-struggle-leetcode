@@ -1,5 +1,7 @@
 package r144;
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -12,14 +14,7 @@ import java.util.Stack;
  * @Version V1.0
  **/
 
-public class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode(int x) { val = x; }
-}
-
-class Solution {
+public class Solution {
     List<Integer> list = new ArrayList<>();
 
     /**

@@ -1,6 +1,8 @@
 package r501;
 
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -28,53 +30,7 @@ import java.util.List;
  * @Date 2019/7/24 18:16
  * @Version V1.0
  **/
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    public TreeNode(){}
-    TreeNode(int x) { val = x; }
-    /**
-     * 添加数据
-     * @param val
-     */
-    public void add(int val) {
-        add(this, val);
-    }
-    public TreeNode add(TreeNode node, int val){
-        if(node == null){
-            return new TreeNode(val);
-        }
-        //将等于的情况优先放到为空的孩子节点上，否则按照 左孩子-右孩子 的顺序插入
-        if(val == node.val && node.left == null)
-            node.left = add(node.left, val);
-        else if(val == node.val && node.right == null)
-            node.right = add(node.right, val);
-        else if(val < node.val)
-            node.left = add(node.left, val);
-        else if(val > node.val)
-            node.right = add(node.right, val);
-        return node;
-    }
-
-    /**
-     * 中序遍历
-     */
-    public void inOrder(){
-        inOrder(this);
-    }
-    public void inOrder(TreeNode node){
-        if(node == null){
-            return;
-        }
-        inOrder(node.left);
-        System.out.println(node.val);
-        inOrder(node.right);
-    }
-}
-
-
-class Solution {
+public class Solution {
     List<Integer> list = new ArrayList<>();
     Integer maxCount = 0;
     Integer curCount = 0;
