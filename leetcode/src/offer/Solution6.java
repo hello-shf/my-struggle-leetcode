@@ -1,4 +1,4 @@
-package offer.array;
+package offer;
 
 import common.ListNode;
 

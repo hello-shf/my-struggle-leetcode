@@ -1,4 +1,4 @@
-package offer.array;
+package offer;
 
 /**
  * 描述：斐波那锲数列

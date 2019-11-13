@@ -1,4 +1,4 @@
-package offer.array;
+package offer;
 
 /**
  * 描述： 二维数组中的查找
