@@ -35,7 +35,7 @@ public class JSZ {
     }
 
     public static void main(String[] args) {
-        int i = maxProductAfterCutting(8);
+        int i = maxProductAfterCutting(7);
         System.out.println(i);
     }
 }
