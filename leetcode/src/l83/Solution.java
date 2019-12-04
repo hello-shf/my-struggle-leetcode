@@ -90,5 +90,9 @@ public class Solution {
         ListNode listNode = new ListNode(arr);
         ListNode node = deleteDuplicates(listNode);
         System.out.println(node);
+
+        for(int i = 2; i<= 57; i++){
+            System.out.println(i);
+        }
     }
 }
