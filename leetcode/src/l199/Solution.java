@@ -1,5 +1,7 @@
 package l199;
 
+import common.TreeNode;
+
 import java.util.*;
 
 /**
@@ -72,6 +74,27 @@ public class Solution {
             right1(root.right, list);
         }
     }
+    //层序遍历加level映射。
+    public static List<Integer> rightSideView2(TreeNode root) {
+        List<Integer> rightView = new ArrayList<>();
+        if(root == null) return rightView;//非空判断
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        int level = 0;
+        queue.add(root);
+        while (!queue.isEmpty()){
+            int level_len = queue.size();
+            for(int i=0; i<level_len; i++){
+                TreeNode cur = queue.remove();
+                if(i == level_len - 1){//只记录最右边的元素
+                    rightView.add(cur.val);
+                }
+                if(cur.left != null) queue.add(cur.left);
+                if(cur.right != null) queue.add(cur.right);
+            }
+            level ++;
+        }
+        return rightView;
+    }
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(5);
@@ -82,33 +105,5 @@ public class Solution {
         Solution solution = new Solution();
         List<Integer> list = solution.rightSideView(root);
         System.out.println();
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(){
-
-    }
-    TreeNode(int x) {
-        val = x;
-        this.left = null;
-        this.right = null;
-    }
-    public void add(int val){
-        add(this, val);
-    }
-    public TreeNode add(TreeNode node, int val){
-        if(node == null){
-            return new TreeNode(val);
-        }
-        if(val > node.val){
-            node.right = add(node.right, val);
-        }else{
-            node.left = add(node.left, val);
-        }
-        return node;
     }
 }
