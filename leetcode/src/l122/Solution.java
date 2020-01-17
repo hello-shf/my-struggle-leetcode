@@ -29,6 +29,7 @@ package l122;
  * @Version V1.0
  **/
 public class Solution {
+    //波峰波谷
     public static int maxProfit(int[] prices) {
         int sum = 0;
         for(int i = 0; i < prices.length - 1; i++){
@@ -38,11 +39,22 @@ public class Solution {
         }
         return sum;
     }
+    //动态规划
+    public static int maxProfit1(int[] prices) {
+        int dp_i_0 = 0;//利润
+        int dp_i_1 = Integer.MIN_VALUE;//成本
+        for(int price : prices){
+            int temp = dp_i_0;//记录之前的利润
+            dp_i_0 = Math.max(dp_i_0, dp_i_1 + price);//dp_i_1 + price: 如果本次卖出,可得利润。
+            dp_i_1 = Math.max(dp_i_1, temp - price);//temp - price: 如果本次买入，需要付出的成本。这里应该有一个悖论：如果一天适合买入，则一定不适合卖出。
+        }
+        return dp_i_0;
+    }
 
     public static void main(String[] args) {
-//        int[] arr = {7, 1, 5, 3, 6, 4};
-        int[] arr = {1, 2, 3, 4, 5};
-        int i = maxProfit(arr);
+        int[] arr = {7, 1, 5, 3, 6, 4};
+//        int[] arr = {1, 2, 3, 4, 5};
+        int i = maxProfit1(arr);
         System.out.println(i);
     }
 }

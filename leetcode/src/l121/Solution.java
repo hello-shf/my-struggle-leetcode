@@ -1,5 +1,6 @@
 package l121;
 
+
 /**
  * 描述：
  *
@@ -42,15 +43,35 @@ public class Solution {
         }
         return max;
     }
+    public static int maxProfit2(int[] prices){//1买入，0卖出
+        int n = prices.length;
+        int[][] dp = new int[n][2];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1; i < n; i++) {
+            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]);
+            dp[i][1] = Math.max(dp[i-1][1], -prices[i]);
+        }
+        return dp[n - 1][0];
+    }
+    public static int maxProfit3(int[] prices){
+        int dp_i_0 = 0; //利润
+        int dp_i_1 = Integer.MIN_VALUE;//成本
+        for(int price : prices){
+            dp_i_0 = Math.max(dp_i_0, dp_i_1 + price);//dp_i_1 + price : 假如今天卖出去可得利润
+            dp_i_1 = Math.max(dp_i_1, -price);//-price : 假如今天买入，成本
+        }
+        return dp_i_0;
+    }
 
     public static void main(String[] args) {
-        int[] aa = {7,6,4,3,1};
-        int i = maxProfit(aa);
-        System.out.println(i);
+//        int[] aa = {7,6,4,3,1};
+//        System.out.println(maxProfit2(aa));
         int[] bb = {7,1,5,3,6,4};
-        int j = maxProfit(bb);
-        System.out.println(j);
+        System.out.println(maxProfit3(bb));
     }
+
+
 }
 /**
  刷动态规划 #121. 买卖股票的最佳时机
