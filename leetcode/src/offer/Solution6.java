@@ -36,13 +36,22 @@ public class Solution6 {
         //递归语句之后，即递归深度 --，递归语句之前递归深度 ++ 的天然特性。即在递归语句之后，链表是从尾到头的顺序。
         list.add(head.val);
     }
+    public static void printListReversingly1(ListNode head) {
+        if(head == null){
+            return;
+        }
+        printListReversingly1(head.next);
+        //递归语句之后，即递归深度 --，递归语句之前递归深度 ++ 的天然特性。即在递归语句之后，链表是从尾到头的顺序。
+        System.out.println(head.val);
+    }
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4};
         ListNode root = new ListNode(arr);
-        int[] ints = printListReversingly(root);
-        for (int i : ints)
-            System.out.print(i);
-        System.out.println();
+//        int[] ints = printListReversingly(root);
+//        for (int i : ints)
+//            System.out.print(i);
+//        System.out.println();
+        printListReversingly1(root);
     }
 }
