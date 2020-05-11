@@ -70,4 +70,19 @@ public class TreeNode {
         preOrder(node.left);
         preOrder(node.right);
     }
+
+    /**
+     * 后序遍历
+     */
+    public void postOrder(){
+        postOrder(this);
+    }
+    private void postOrder(TreeNode node){
+        if(node == null){
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.val);
+    }
 }

@@ -97,5 +97,11 @@
 | offer.Solution22 | 链表中倒数第k个节点 | 链表 | √ | --- | √ | × | × |
 | offer.Solution24 | 反转链表 | 链表 | √ | --- | √ | × | × |
 | offer.Solution25 | 合并两个排序的链表 | 链表 | √ | --- | √ | × | × |
+| offer.Solution26 | 树的子结构 | 二叉树 | √ | --- | √ | × | × |
+| offer.Solution27 | 二叉树的镜像 | 二叉树 | √ | --- | √ | × | × |
+| offer.Solution28 | 对称的二叉树 | 二叉树 | √ | --- | √ | × | × |
+| offer.Solution29 | 顺时针打印矩阵 | 数组 | √ | --- | √ | × | × |
+| offer.Solution30 | 包含min函数的栈 | 栈 | √ | --- | √ | × | × |
+| offer.Solution31 | 栈的压入、弹出序列 | 栈 | √ | --- | √ | × | × |
 
 
