@@ -39,11 +39,31 @@ public class Solution {
         return left;
     }
 
+    public static int search1(int[] nums, int target){
+        if(nums.length == 0) return 0;
+        int l = 0, r = nums.length - 1;
+        while(l < r){
+            int m = (l + r) / 2;
+            if(nums[m] < target) {
+                //[l, m+1]
+                l = m + 1;
+            } else if(nums[m] > target) {
+                //[m, r]
+                r = m;
+            } else {
+                return m;
+            }
+        }
+        return l;
+    }
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 4, 6, 7, 9};
-        int i = searchInsert(arr, 10);
+        int[] arr = new int[]{1,3,5,6};
+        int i = search1(arr, 7);
         System.out.println(i);
     }
+
+
+
 }
 /**
  #35. 搜索插入位置
