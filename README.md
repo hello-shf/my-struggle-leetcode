@@ -122,7 +122,6 @@
 | offer.Solution46 | 把数字翻译成字符串 | 字符串 | √ | --- | √ | × | × |
 | offer.Solution47 | 礼物的最大价值 | 动态规划 | √ | --- | √ | × | × |
 | offer.Solution48 | 最长不含重复字符的子字符串 | hash表 | √ | --- | √ | × | × |
-
 | offer.Solution49 | 丑数 | 数学 | √ | --- | √ | × | × |
 | offer.Solution50 | 第一个只出现一次的字符 | hash表 | √ | --- | √ | × | × |
 | offer.Solution51 | 数组中的逆序对 | 数学 | √ | --- | √ | × | × |
